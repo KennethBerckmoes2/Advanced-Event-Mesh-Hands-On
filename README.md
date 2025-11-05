@@ -91,41 +91,41 @@ Discovering SAP Integration Suite, advanced event mesh
     - [Exercise 2.2 - Create a queue in Advanced Event Mesh](exercises/ex2#exercise-22---create-a-queue-in-advanced-event-mesh)
     - [Exercise 2.3 - Create a Queue Subscription for S/4HANA Events](exercises/ex2#exercise-23---create-a-queue-subscription-for-sap-s4hana-events-in-advanced-event-mesh)
  
-Queue Consumer 
+Consuming from a Queue in SAP Integration Suite, advanced event mesh 
  
 - [Exercise 3 - Consume SAP S/4HANA Event from Advanced Event Mesh Queue](exercises/ex3/) (5 mins)
 
-    - [Exercise 3.1 - Start your Queue Consumer Application and connect to Advanced Event Mesh](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex3#exercise-31-start-your-queue-consumer-application-and-connect-to-advanced-event-mesh)
-    - [Exercise 3.2 - Consume and explore events in Queue Consumer](https://github.tools.sap/D034841/L2W-AEM-Hands-On/blob/main/exercises/ex3/README.md#exercise-32-consume-and-explore-events-in-queue-consumer)
+    - [Exercise 3.1 - Start your Queue Consumer Application and connect to Advanced Event Mesh](exercises/ex3#exercise-31-start-your-queue-consumer-application-and-connect-to-advanced-event-mesh)
+    - [Exercise 3.2 - Consume and explore events in Queue Consumer](exercises/ex3/README.md#exercise-32-consume-and-explore-events-in-queue-consumer)
 
-SAP Integration Suite, advanced event mesh 
+Consuming from a Topic in SAP Integration Suite, advanced event mesh 
 
 - [Exercise 4 - Consume SAP S/4HANA Event via Advanced Event Mesh Topic](exercises/ex4/) (10 mins)
  
-    - [Exercise 4.1 - Mesh Manager](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/blob/main/exercises/ex4/README.md#exercise-41-mesh-manager)
-    - [Exercise 4.2 - Use TryMe! to consume events from a topic on a second broker](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex4#exercise-42-consume-events-via-a-topic-on-a-second-broker)
-    - [Exercise 4.2 - Produce and Consume events via a topic](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex4#exercise-42-produce-and-consume-events-via-a-topic)
+    - [Exercise 4.1 - Mesh Manager](exercises/ex4/README.md#exercise-41-mesh-manager)
+    - [Exercise 4.2 - Use TryMe! to consume events from a topic on a second broker](exercises/ex4#exercise-42-consume-events-via-a-topic-on-a-second-broker)
+    - [Exercise 4.2 - Produce and Consume events via a topic](exercises/ex4#exercise-42-produce-and-consume-events-via-a-topic)
       
 - [Exercise 5 - Explore Topic Hierarchies and Wildcards](exercises/ex5/) (15 mins)
  
-    - [Exercise 5.1 - Learn about Topic Hierarchies and Wildcards](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex5#exercise-51-learn-about-topic-hierarchies-and-wildcards)
-    - [Exercise 5.2 - Practice Topic Hierarchies and Wildcards using Try Me !](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex5#exercise-52-practice-topic-hierarchies-and-wildcards-using-try-me----animal-edition)   
+    - [Exercise 5.1 - Learn about Topic Hierarchies and Wildcards](exercises/ex5#exercise-51-learn-about-topic-hierarchies-and-wildcards)
+    - [Exercise 5.2 - Practice Topic Hierarchies and Wildcards using Try Me !](exercises/ex5#exercise-52-practice-topic-hierarchies-and-wildcards-using-try-me----animal-edition)   
    
-SAP Integration Suite, advanced event mesh      
+SAP Integration Suite, advanced event mesh additional features      
    
 - [Exercise 6 - Advanced Event Mesh as an end-to-end platform for Event-Driven Architectures](exercises/ex6/) (20 mins)
 
-    - [Exercise 6.1 - Explore Insights](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex6#exercise-61-explore-insights)
-    - [Exercise 6.2 - Event Management](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex6/README.md#exercise-62-event-management)
+    - [Exercise 6.1 - Explore Insights](exercises/ex6#exercise-61-explore-insights)
+    - [Exercise 6.2 - Event Management](exercises/ex6/README.md#exercise-62-event-management)
  
-SAP Integration Suite    
+The power of SAP Integration Suite & SAP Integration Suite, advanced event mesh  
    
 - [Exercise 7 - Building a micro-integration in SAP Integration Suite](exercises/ex7/) (1h30)
 
-    - [Exercise 7.1 - Prepare and deploy your micro-integration flow](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex7/README.md#exercise-71-prepare-and-deploy-your-micro-integration-flow)
-    - [Exercise 7.2 - Adding converters to the micro-integration flow](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex7/README.md#exercise-72-adding-converters-to-the-micro-integration-flow)
-    - [Exercise 7.3 - Adding a message mapping to the micro-integration flow](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex7/README.md#exercise-72-adding-converters-to-the-micro-integration-flow)
-    - [Exercise 7.4 - Publishing the event as a CSV on an SFTP server](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex7/README.md#exercise-72-adding-converters-to-the-micro-integration-flow)
+    - [Exercise 7.1 - Prepare and deploy your micro-integration flow](exercises/ex7/README.md#exercise-71-prepare-and-deploy-your-micro-integration-flow)
+    - [Exercise 7.2 - Adding converters to the micro-integration flow](exercises/ex7/README.md#exercise-72-adding-converters-to-the-micro-integration-flow)
+    - [Exercise 7.3 - Adding a message mapping to the micro-integration flow](exercises/ex7/README.md#exercise-72-adding-converters-to-the-micro-integration-flow)
+    - [Exercise 7.4 - Publishing the event as a CSV on an SFTP server](exercises/ex7/README.md#exercise-72-adding-converters-to-the-micro-integration-flow)
 
 
 ## License
