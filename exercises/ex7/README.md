@@ -241,37 +241,45 @@ Now, click on **“Add source message”** and upload **“[SalesOrderAEMSchema.
 After you've added a source message, click on **“Add target message”** and upload **“[SalesOrderTargetV2.xsd](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/blob/main/exercises/ex7/SalesOrderTargetV2.xsd)”** as the target message.
 
 Now you can drag and drop a line from the source message to the target message for the following fields (**important to not make any mistakes here!**):
-* orderHeader --> orderHeader
-* order --> order
-* salesOrderNumber --> orderID
-* creator --> creator
-* date --> orderDate
-* salesType --> salesType
-* ordertype --> ordertype
-* salesOrg --> salesOrg
-* distributionChannel --> distributionChannel
-* division --> region
-* customer --> buyer
-* customerID --> buyerID
-* customerName --> buyerName
-* **zipCode --> address**
-* **street --> address**
-* phone --> telephone
-* orderItem --> orderItem
-* item --> item
-* material --> material
-* materialType --> materialType
-* itemType --> itemType
-* orderSchedule --> orderSchedule
-* scheduleNumber --> scheduleNumber
-* quantity --> units
-* uom --> uom
+orderHeader -> orderHeader
+  salesOrderNumber -> orderID
+  creator -> creator
+  date -> orderDate
+  salesType -> salesType
+  ordertype -> ordertype
+  salesOrg -> salesOrg
+  distributionChannel -> distributionChannel
+  division -> region
+  netvalue -> netvalue
+  currency -> currency
+  customer -> buyer
+	  customerId -> buyerId
+	  customerName -> buyerName
+	  zipCode -> address
+	  street -> address
+	  phone -> telephone
+	  country -> address
+	  city -> address
+	  emailAddress -> emailAddress
+	  	email -> email
+  orderItem -> orderItem
+  	item -> item
+  	material -> material
+  	materialType -> materialType
+  	itemType -> itemType
+  	itemDescription -> itemDescription
+  orderSchedule -> orderSchedule
+  	scheduleNumber -> scheduleNumber
+  	quantity -> units 
+  	uom -> uom
 
-Your mapping should look like the screenshot below, pay close attention, both zipCode and street from the source message are mapped to the address field in the target message. Let’s merge these two source fields into one target field, click on **“Address”** field under buyer.
 
-![Pic 33](/./images/Screenshot%202025-05-30%20at%2013.30.48.png)
+Your mapping should look something like the screenshot below, pay close attention, zipCode, street, country and city from the source message are mapped to the address field in the target message. Let’s merge these source fields into one target field “address” which contains “street, zipCode City, Country”. 
+Click on “address” field under buyer.
 
-At the bottom of your screen, you’ll see the mapping expression configuration. On the left side you have functions, here you can search for **“concat”** and add this to your mapping expression. Also remove any links in the mapping expression.
+<img width="1839" height="661" alt="image" src="https://github.com/user-attachments/assets/4d3839a5-9349-4210-91a4-10bd4a700862" />
+
+At the bottom of your screen, you’ll see the mapping expression configuration. Remove any links in the mapping expression. On the left side you have functions, here you can search for “**concat**” and add this to your mapping expression.
 
 ![Pic 34](/./images/Screenshot%202025-05-30%20at%2013.32.14.png)
 
