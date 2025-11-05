@@ -324,16 +324,10 @@ After this you can **“Save”** and **“Deploy”** your integration flow.
 Once the integration flow is deployed, check if the “Trace” option is still on. 
 If it’s not change the log level back to “Trace” by going to **Monitor --> Integrations and APIs --> Manage Integration Content**, then you select your flow, and scroll down to **“Log Configuration”** and change the Log Level from **“Info” to “Trace”** and confirm by clicking **“Change”**.
 
-Once the log level is set to “Trace”, go back to the “Try Me!” in the broker manager of SAP Integration Suite, Advanced Event Mesh.
-Reconnect to your broker (if the connection was interrupted) and publish the content from "[**“SalesOrder.json”**](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/blob/main/exercises/ex7/SalesOrder.json)" to topic **sap.com/salesorder/create/V1/[FirstNameLastName]**.
-
-![Pic 40](/./images/Screenshot%202025-05-30%20at%2013.50.11.png)
-
-Once the sales order has been published, go in SAP Integration Suite to **Monitor --> Integrations and APIs --> Monitor Message Processing --> All Artifacts Past Hour** and select your integration flow. If you scroll down on the right side of the screen to **“Logs”** and select one of the **“Trace”** links.
+Now go back to the monitoring of your integration flow by clicking on **“Monitor Message Processing”** under the status details of your integration flow. In the message processing monitoring, scroll down on the right side of the screen to **“Logs”** and select one of the **“Trace”** links.
 There, you can click on the “End” event and then go to “Message Content”, you should see the CSV with the mapped content.
 
-![Pic 41](/./images/Screenshot%202025-05-30%20at%2013.52.08.png)
-
+<img width="1860" height="1098" alt="image" src="https://github.com/user-attachments/assets/0b7ed85e-ac38-420b-b6a1-7dd8625a290c" />
 
 
 ## Exercise 7.5 Publishing the event as a CSV on an SFTP server
