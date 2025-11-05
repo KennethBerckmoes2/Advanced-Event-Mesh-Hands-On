@@ -184,12 +184,12 @@ Your flow should look like this:
 Once, the converters are added, you can go in the **JSON to XML Converter** step (double-click), go to **Processing** and **uncheck** "Add XML Root Element".
 Next, in the **XML to CSV Converter** enter the following path:
 
-/orderHeader/order**
+/orderHeader
 
 Also make sure the **XML-based** is entered in the **CSV Header** field.
 The **Processing** tab in your two converters should look like this:
 
-![Pic 21](/./images/Screenshot%202025-05-30%20at%2011.50.19.png)
+<img width="1524" height="616" alt="image" src="https://github.com/user-attachments/assets/dafa1ecf-67df-4a3a-b4c9-b4e3202cf632" />
 
 Let’s run the flow, go to the top of your screen and click on **save**, then click on **deploy**.
 
