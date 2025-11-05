@@ -202,17 +202,7 @@ When you go to **Monitor --> Integrations and APIs**, then scroll down to **“M
 There, on the right part of the screen, you can scroll down to **“Log Configuration”**, change the Log Level from **“Info”** to **“Trace”**, this will enable you to trace the content of your integration flow. For more information on this trace option, please refer to the [SAP Help Portal](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/tracing-execution-of-integration-flow).
 If a pop-up appears, just press “Change”.
 
-![Pic 24](/./images/Screenshot%202025-05-30%20at%2011.55.51.png)
-
-Let’s run the scenario, go back to the “Try Me!” in the Broker Manager in SAP Integration Suite, Advanced Event Mesh.
-
-Reconnect to your broker, publish to the following topic: **sap.com/salesorder/create/V1/[FirstNameLastName]**
-
-And copy and paste the content from [**“SalesOrder.json”**](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/blob/main/exercises/ex7/SalesOrder.json) in the message content, then click on **“Publish”**.
-
-![Pic 25](/./images/Screenshot%202025-05-30%20at%2011.57.27.png)
-
-Now go back to **Monitor-->Integrations and APIs** in SAP Integration Suite, go to **“Manage Integration Content”**, and select your integration flow , under “Artifact Details” you’ll see **“Monitor Message Processing”**, you can click on that. 
+Now go back to the monitoring by clicking **“Monitor Message Processing”**. 
 
 ![Pic 26](/./images/Screenshot%202025-05-30%20at%2012.03.02.png)
 
