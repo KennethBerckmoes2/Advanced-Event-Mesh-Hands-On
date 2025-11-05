@@ -8,7 +8,57 @@ This also means that some of the responsibilities traditionally handled by middl
 
 Micro-integrations can be developed using the Cloud Integration capability of SAP Integration Suite. This will be demonstrated in this exercise.
 
-## Exercise 7.1 Prepare and deploy your micro-integration flow
+In this scenario, an application will be publishing sales order data events (e.g. sales order created, sales order changed, etc.) to topics in SAP Integration Suite, Advanced Event Mesh. These events will be stored in a queue, and SAP Integration Suite (Cloud Integration capability) will be picking up the events from this queue. In SAP Integration Suite, a micro-integration will convert the format of the events from JSON to a CSV file and will also map the structure of the events to a new target structure. After SAP Integration Suite has transformed the events, it will push the CSV file to an SFTP server.
+
+<img width="420" height="98" alt="image" src="https://github.com/user-attachments/assets/1c3cf53f-7941-4a91-a838-c1b0676aee49" />
+
+## Exercise 7.1 Add new subscriptions to your queue
+
+In the first step, you will make sure that the queue in your broker (created in the previous exercise) is subscribed to sales order topics. This ensures that when applications are publishing sales order events to the broker, they are queued in our queue.
+
+1. Go to your queue in SAP Integration Suite, Advanced Event Mesh by going to Cluster Manager.
+
+<img width="1847" height="825" alt="image" src="https://github.com/user-attachments/assets/d61a0377-0d7e-43af-9a12-a80437dc6ab4" />
+
+2. Select your Broker Service
+
+<img width="1847" height="132" alt="image" src="https://github.com/user-attachments/assets/c1d21551-469e-40b3-889c-af98b3aaafc9" />
+
+3. Click on "Open Broker Manager"
+
+<img width="1847" height="525" alt="image" src="https://github.com/user-attachments/assets/e7ee0130-a93e-4fe2-9c7c-71188de7c8ca" />
+
+4. In the broker manager, go to "Queues"
+
+<img width="1847" height="807" alt="image" src="https://github.com/user-attachments/assets/f308cf03-d9bc-4f66-a829-0288e7ab59b1" />
+
+5. Now, select the queue you created in the previous exercise
+
+<img width="1847" height="109" alt="image" src="https://github.com/user-attachments/assets/e1614b8a-35e6-47a2-9c0e-f87d5acbd335" />
+
+6. Go to "Subscription" and subscribe the queue to different topics by clicking on the button that says: "+Subscription".
+7. Add the following subscriptions:
+•	sap.com/salesorder/create/V1/>
+•	sap.com/salesorder/change/V1/>
+•	sap.com/salesorder/retry/V1
+•	salesorder/create/V1
+
+Please note, the topics we're using use the wildcard ">".
+<img width="1726" height="427" alt="image" src="https://github.com/user-attachments/assets/496cad1f-07a1-42dc-bd3d-6f386e40837a" />
+
+9. Once your queue is subscribed to the topics, we will onboard our publisher. 
+We built an application that is publishing sales order events on the topics that we just defined. 
+This way, you should see that the sales orders you publish in this application land in your queue.
+This will eventually trigger the integration flow that we will build in SAP Integration Suite.
+
+Go to this application by accessing the following link: 
+https://solacedemo-uf1dchbp.launchpad.cfapps.ca10.hana.ondemand.com/a31830ca-c8a1-4f4f-936a-eb998f98c20e.CustomerOrderFormRPP.CustomerOrderFormRPP-1.0.0/index.html
+
+
+
+
+
+## Exercise 7.2 Prepare and deploy your micro-integration flow
 
 Go to SAP Integration Suite, and go to **Design --> Integrations and APIs**, then click on **Create**.
 
@@ -117,7 +167,7 @@ There should be an error related to your SFTP server, you can check that by scro
 
 ![Pic 18](/./images/Picture3.png)
 
-## Exercise 7.2 Adding converters to the micro-integration flow
+## Exercise 7.3 Adding converters to the micro-integration flow
 
 Now, let’s add some conversion options. Go to **Integrations and APIs --> Micro-Integrations_[FirstNameLastName] --> AEMLegacyOutputAdapter_[FirstNameLastName]**.
 In the process steps of **Cloud Integration**, go to **Transformation**, then select **Converters** and add the following converters to your flow (in this order):
@@ -182,7 +232,7 @@ There you are taken back to the artifact editor, and now you can start editing y
 
 
 
-## Exercise 7.3 Adding a message mapping to the micro-integration flow
+## Exercise 7.4 Adding a message mapping to the micro-integration flow
 
 Once you are in the artifact editor, you can choose **“Mapping”** in the menu on top. Select **“Message Mapping”** and drag and drop this step in **between the two converters**. Your flow should look like the one below now.
 
@@ -279,7 +329,7 @@ There, you can click on the “End” event and then go to “Message Content”
 
 
 
-## Exercise 7.4 Publishing the event as a CSV on an SFTP server
+## Exercise 7.5 Publishing the event as a CSV on an SFTP server
 
 Now, you’ve experienced the low-code development of SAP Integration Suite, let’s make our integration flow really publish to an SFTP server.
 Go to the following link, create a test SFTP server and copy the credentials: 
