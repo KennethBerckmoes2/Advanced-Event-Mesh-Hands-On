@@ -123,7 +123,11 @@ Now, we are going to adjust the integration flow, so click on the Edit button.
 
 ![Pic 8](/./images/Screenshot%202025-05-30%20at%2011.17.49.png)
 
-First, whether the connection details of your mesh are correct. 
+First, select the Advanced Event Mesh sender adapter.
+Then, copy the “Host URI”, “Message VPN”, and “Username” of your broker and paste it in the sender connection details in SAP Integration Suite. You can copy this from the same page where you previously copied the password from. 
+(in AEM: Cluster Manager  Select your Event Broker Service  Connect  Select View By “Protocol”  Select “Solace Messaging  Solace JMS API.)
+
+Once this is done, you should enter the name of the Secure Parameter you created (e.g. SOBroker_FirstNameLastName) under “Password Secure Alias”.
 
 ![Pic 9](/./images/Screenshot%202025-05-30%20at%2011.18.50.png)
 
