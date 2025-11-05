@@ -81,13 +81,13 @@ SAP Business Accelerator Hub (optional)
 
 - [Exercise 1 - Explore SAP S/4HANA Cloud Standard Events in SAP Business Accelerator Hub](exercises/ex1/) (15 mins)
 
-    - [Exercise 1.1 - Look up BusinessPartner events in SAP SAP Business Accelerator Hub (optional)](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex1)
+    - [Exercise 1.1 - Look up BusinessPartner events in SAP SAP Business Accelerator Hub](exercises/ex1/)
 
-SAP Integration Suite, advanced event mesh 
+Discovering SAP Integration Suite, advanced event mesh 
     
 - [Exercise 2 - First Steps in Advanced Event Mesh](exercises/ex2/) (30 mins)
 
-    - [Exercise 2.1 - Log into Advanced Event Mesh and explore it](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex2#exercise-21---log-into-advanced-event-mesh-and-explore-it)
+    - [Exercise 2.1 - Log into Advanced Event Mesh and explore it](exercises/ex2#exercise-21---log-into-advanced-event-mesh-and-explore-it)
     - [Exercise 2.2 - Create a queue in Advanced Event Mesh](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex2#exercise-22---create-a-queue-in-advanced-event-mesh)
     - [Exercise 2.3 - Create a Queue Subscription for S/4HANA Events](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/tree/main/exercises/ex2#exercise-23---create-a-queue-subscription-for-sap-s4hana-events-in-advanced-event-mesh)
  
