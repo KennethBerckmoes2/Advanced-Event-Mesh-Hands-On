@@ -122,7 +122,7 @@ Let’s walkthrough some of the features of the Event Portal
 
 By now, it should be clear that SAP Integration Suite, advanced event mesh is more than just an event broker. That it is even more than an interconnected mesh of advanced event brokers. It is an end-to-end solution to bring EDA in a structured and governed way to your organization. It comes with the capabilities to create and manage event brokers, queues and topics end-to-end, collaboratively manage your EDA setup and to monitor the setup in detail.
 
-Please continue with - [Exercise 7 - Building a micro-integration in SAP Integration Suite](exercises/ex7/)
+Please continue with - [Exercise 7 - Building a micro-integration in SAP Integration Suite](../ex7/README.md)
 
 
 
