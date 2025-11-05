@@ -52,9 +52,27 @@ This way, you should see that the sales orders you publish in this application l
 This will eventually trigger the integration flow that we will build in SAP Integration Suite.
 
 Go to this application by accessing the following link: 
+
 https://solacedemo-uf1dchbp.launchpad.cfapps.ca10.hana.ondemand.com/a31830ca-c8a1-4f4f-936a-eb998f98c20e.CustomerOrderFormRPP.CustomerOrderFormRPP-1.0.0/index.html
 
+To connect to the application, enter the connection details of your broker on top of the webpage:
 
+<img width="1853" height="399" alt="image" src="https://github.com/user-attachments/assets/b339ae2d-4078-402c-ae0c-c969b9b4e837" />
+
+You can find these credentials in the Cluster Manager in SAP Integration Suite, Advanced Event Mesh. Go in AEM to Cluster Manager --> select your broker --> go to the “Connect” tab. 
+There you look for “Connect with JavaScript” and select “Solace JavaScript API” which uses the protocol “web-messaging”. Once selected, a pane on the right side of the screen should open with the connection details. Copy and paste these credentials in sales order application.
+
+<img width="1853" height="897" alt="image" src="https://github.com/user-attachments/assets/564c34d9-1c3e-48b8-9939-ad31de781ad2" />
+
+If the credentials are pasted in the sales order application, click on the “Connect” button on top, now you should get the notification that says “Successfully Connected” on the bottom of the page. Once connected, enter sales order data in the order form on the left and click on “Submit”. You should see the sales order appearing in “Order Tracking Status”.
+
+<img width="1710" height="832" alt="image" src="https://github.com/user-attachments/assets/e77ad8ff-9465-465f-91fe-fa9983442a2c" />
+
+Keep the sales order application open in a separate tab, as we will use this application for the remainder of the exercise.
+
+Now, let’s enable SAP Integration Suite to authenticate to your broke, so it can read from your queue. Go back to the “Connect” tab in the Cluster Manager of your broker in SAP Integration Suite, Advanced Event Mesh and on the right top choose View by --> Protocol.
+
+<img width="1858" height="611" alt="image" src="https://github.com/user-attachments/assets/0749fcf5-fa2a-489b-8350-d5a648a667c3" />
 
 
 
