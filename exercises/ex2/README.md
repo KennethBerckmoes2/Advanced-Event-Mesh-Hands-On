@@ -85,7 +85,7 @@ HINT: If you cannot see the tiles, uncheck the Only show my services box
   
 7. Click Create
   
-<img width="747" alt="image" src="https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/assets/17439/9f91d7b7-e561-46d0-bf65-d12860d7b5ca">
+<img width="1494" height="620" alt="image" src="https://github.com/user-attachments/assets/e1114e25-5346-4505-aa91-479b29f85b5c" />
   
 8. On the next screen click Apply
   
