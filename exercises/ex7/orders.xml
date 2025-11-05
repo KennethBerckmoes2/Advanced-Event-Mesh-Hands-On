@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orderHeader xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <order>
+    <salesOrderNumber>SO456789</salesOrderNumber>
+    <creator>Jane Smith</creator>
+    <date>2025-05-28</date>
+    <salesType>Retail</salesType>
+    <ordertype>Rush</ordertype>
+    <salesOrg>EMEA</salesOrg>
+    <distributionChannel>Mobile</distributionChannel>
+    <division>01</division>
+    
+    <customer>
+      <customerId>CUST1001</customerId>
+      <customerName>Tech Solutions Ltd.</customerName>
+      <zipCode>10115</zipCode>
+      <street>Innovationsstraße 12</street>
+      <phone>+49-30-1234567</phone>
+    </customer>
+    
+    <customer>
+      <customerId>CUST1002</customerId>
+      <customerName>DataCorp</customerName>
+      <zipCode>75008</zipCode>
+      <street>88 Avenue des Champs-Élysées</street>
+      <phone>+33-1-9876543</phone>
+    </customer>
+
+    <orderItem>
+      <item>0010</item>
+      <material>PRD-A123</material>
+      <materialType>Hardware</materialType>
+      <itemType>Standard</itemType>
+      <orderSchedule>
+        <scheduleNumber>SN001</scheduleNumber>
+        <quantity>20.00</quantity>
+        <uom>EA</uom>
+      </orderSchedule>
+      <orderSchedule>
+        <scheduleNumber>SN002</scheduleNumber>
+        <quantity>15.00</quantity>
+        <uom>EA</uom>
+      </orderSchedule>
+    </orderItem>
+
+    <orderItem>
+      <item>0020</item>
+      <material>PRD-B456</material>
+      <materialType>Software</materialType>
+      <itemType>License</itemType>
+      <orderSchedule>
+        <scheduleNumber>SN003</scheduleNumber>
+        <quantity>100.00</quantity>
+        <uom>Users</uom>
+      </orderSchedule>
+    </orderItem>
+    
+  </order>
+</orderHeader>

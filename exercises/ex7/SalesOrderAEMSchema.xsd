@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="orderHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="order" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="salesOrderNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="creator" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="date" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="salesType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="ordertype" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="salesOrg" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="distributionChannel" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="division" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="customer" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="customerId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="customerName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="zipCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="street" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="orderItem" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="item" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="material" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="materialType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="itemType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="orderSchedule" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="scheduleNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="quantity" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="uom" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

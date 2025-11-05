@@ -1,0 +1,32 @@
+{
+  "orderHeader": {
+    "order": [{
+      "salesOrderNumber": "SO456789",
+      "creator": "Jane Smith",
+      "date": "2025-05-28",
+      "salesType": "Retail",
+      "ordertype": "Rush",
+      "salesOrg": "EMEA",
+      "distributionChannel": "Mobile",
+      "division": "01",
+      "customer": [{
+        "customerId": "C1",
+        "customerName": "Tech Solutions",
+        "zipCode": "10115",
+        "street": "Street 1",
+        "phone": "+49-30-123"
+      }],
+      "orderItem": [{
+        "item": "0010",
+        "material": "PRD-A123",
+        "materialType": "Hardware",
+        "itemType": "Standard",
+        "orderSchedule": [{
+          "scheduleNumber": "SN1",
+          "quantity": 20,
+          "uom": "EA"
+        }]
+      }]
+    }]
+  }
+}
