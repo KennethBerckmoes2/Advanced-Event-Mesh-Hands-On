@@ -74,6 +74,23 @@ Now, let’s enable SAP Integration Suite to authenticate to your broke, so it c
 
 <img width="1858" height="611" alt="image" src="https://github.com/user-attachments/assets/0749fcf5-fa2a-489b-8350-d5a648a667c3" />
 
+There, you select “Solace Messaging --> Solace JMS API and copy the password that you find on your right.
+
+<img width="1522" height="684" alt="image" src="https://github.com/user-attachments/assets/9ea3d501-962f-42a9-bd4e-d6eb1ad45ea7" />
+
+Do not close the connection tab in SAP Integration Suite, Advanced Event Mesh, open a new tab in your browser and navigate to the SAP Integration Suite tenant. 
+
+Now, we will add the credentials of your broker in SAP Integration Suite. Go to Monitor --> Integrations and APIs --> scroll down to “Manage Security” --> click on the tile “Security Material”
+
+<img width="1522" height="718" alt="image" src="https://github.com/user-attachments/assets/d4ca17c9-b148-435d-8cee-6ea106e11f8c" />
+
+In here we can upload and create various credentials, click on the “Create” button on the right top and choose “Secure Parameter”.
+
+<img width="1859" height="292" alt="image" src="https://github.com/user-attachments/assets/82407a45-45d9-4a27-b09b-83ae10d588df" />
+
+Give your secure parameter a unique name, for example SOBroker_FirstNameLastName and enter the password you just copied from SAP Integration Suite, Advanced Event Mesh (twice) and deploy.
+
+<img width="1857" height="848" alt="image" src="https://github.com/user-attachments/assets/028165d5-4525-4cb9-826d-34cf7e0afffb" />
 
 
 ## Exercise 7.2 Prepare and deploy your micro-integration flow
