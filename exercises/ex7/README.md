@@ -279,23 +279,31 @@ Click on “address” field under buyer.
 
 <img width="1839" height="661" alt="image" src="https://github.com/user-attachments/assets/4d3839a5-9349-4210-91a4-10bd4a700862" />
 
+
 At the bottom of your screen, you’ll see the mapping expression configuration. Remove any links in the mapping expression. On the left side you have functions, here you can search for “**concat**” and add this to your mapping expression.
 
-![Pic 34](/./images/Screenshot%202025-05-30%20at%2013.32.14.png)
+<img width="1839" height="928" alt="image" src="https://github.com/user-attachments/assets/9872d51a-724e-4450-9e93-d8d76dd73e13" />
 
-After this, you can link the field **“street” to “string1”**, and **“zipCode” to “string2”**, they can be split by a comma (,) and a space ( ), add this (“, “) in the **Delimiter String** (without “”). Then, link **“concat” to “address”**. Your Mapping Expression for the address target field should look like this now.
 
-![Pic 35](/./images/Picture5.png)
+After this, you can link the field **“zipCode” to “string1”**, and **“street” to “string2”**, they can be split by a space (add “ “ without “” in the **Delimiter String**). 
+Your mapping expression should look like this:
 
-Let’s level up our message mapping skills, and choose the field “division” in the source message **OR “region”** in the target message.
+<img width="1244" height="651" alt="image" src="https://github.com/user-attachments/assets/537ac8a0-b7ed-42a4-969b-2072b946849e" />
+
+Now, add a second concat function to join **“street”** with the concat we’ve just created (zipCode and city), split this by a comma (,) and a space ( ) in the Delimiter String. Then, a third concat function to join “country” with the other fields, also split by a comma (,) and a space ( ) in the Delimiter String. Finally, link the last concat expression to the field “address”. Your final mapping expression for the mapping field should look like this: 
+
+<img width="1706" height="517" alt="image" src="https://github.com/user-attachments/assets/b796477e-f16b-46f1-8726-4cf5f21abdd9" />
+
+Let’s level up our message mapping skills, and choose the field **“division”** in the source message **OR “region”** in the target message.
 This mapping expression is now a simple 1-1 mapping expression. We want to change it to an if-else expression: 
-IF division = 01 THEN 
-  region = Europe 
-  ELSE 
-  region = Global
+IF division = DV01 THEN 
+	region = Europe 
+ELSE 
+	region = Global
 END IF
 
 Now that you know how to build a simple mapping expression, build the following mapping expression (functions we’re using are “constant”, “if” and “equals(string)”):
+
 
 ![Pic 36](/./images/Picture6.png)
 
