@@ -131,80 +131,42 @@ Once this is done, you should enter the name of the Secure Parameter you created
 
 ![Pic 9](/./images/Screenshot%202025-05-30%20at%2011.18.50.png)
 
-If the Processing tab is already open, you can continue there. If not, open SAP Integration Suite, Advanced Event Mesh in a new browser tab and follow these steps:
-1.	Go to Cluster Manager.
-2.	Select your Event Broker Service.
-3.	Click Connect.
-4.	Under View By, select Protocol.
-5.	Choose Solace Messaging → Solace JMS API.
-6.	Copy the following details from the connection pane on the right:
-    -  Host URI
-    -  Message VPN
-    -  Username
+Once you have configured the connection details in your broker, go to Processing and there you can select a consumer mode, there are three options:
+•	**Direct**: consumer subscribes to a specific topic, there is no persistence or retry and messages are only delivered while the consumer is connected. Messages are delivered through describing to a topic. Ideal for use cases where low latency is critical and message loss is acceptable.
+•	**Guaranteed**: ensures messages are persisted in a temporary queue and delivered reliably while the flow is running. Ideal for use cases where reliability is important during runtime.
+•	**Durable Topic Endpoint**: designed for the most mission-critical processes, ensuring no message is lost even during outages, restarts, or redeployments. Perfect for financial data or audit logs where every message counts.
 
-Paste these values into the connection details for the Advanced Event Mesh Sender Adapter.
-Keep the tab with the connection details open, you’ll need it shortly.
+For our use case, sales order processing, we choose the consumer mode **“Guaranteed”**.
+Choose the queue you created in the previous exercise as queue name.
 
-Enter a unique password secure alias this must be unique so you can name it:
-**BrokerUserPass[YourFirstAndLastName]**.
-
-Then, save your integration flow and go to SAP Integration Suite --> **Monitor --> Integrations and APIs.**
-
-Scroll down until you see the tile **“Security Material”**, then click on **Create --> Secure Parameter**.
-
-Give it the same name as your password secure alias: **BrokerUserPass[YourFirstAndLastName]** and enter the password found in the connection details of the Solace JMS API in SAP Integration Suite, Advanced Event Mesh.
-
-Deploy the secure parameter.
-
-Once you've configured the connection details in your broker, go to the processing tab and set the Consumer Mode **“Direct”**.
-Since we'll be subscribing to all created sales orders, enter the following under Topic Subscription: 
-**sap.com/salesorder/create/V1/%3E**
-
-![Pic 10](/./images/Screenshot%202025-05-30%20at%2011.23.22.png)
-
-Under topic subscriptions, special characters may need to be UTF-8 encoded. “%3E” refers to the wildcard “>”.
-You can set the other processing parameters how you like. More info can be found on the [SAP Help Portal](https://help.sap.com/docs/integration-suite/sap-integration-suite/configure-advanced-event-mesh-sender-adapter).
+<img width="1444" height="848" alt="image" src="https://github.com/user-attachments/assets/950dd4c8-0df4-4a30-a4a9-9849999f4124" />
 
 Now **save** and **deploy** the integration flow.
 
-You can see that the deployment status of the integration flow when you go to **Monitor --> Integrations and APIs --> Manage Integration Content --> All**.
+You can see that the deployment status of the integration flow when you go to **Monitor --> Integrations and APIs --> Manage Integration Content --> All**
 
-![Pic 11](/./images/Screenshot%202025-05-30%20at%2011.28.23.png)
+<img width="1857" height="816" alt="image" src="https://github.com/user-attachments/assets/8b8c3d34-c925-4b18-9962-062b0adafb05" />
 
 The status of your integration flow should be **“Started”** and in **green**.
 
-If it’s not, check whether it’s an authentication error, if it is check and adjust your credentials, if it is not, check whether you didn’t use any special characters in your topic subscription.
+If it’s not, check whether it’s an authentication error. In case it is, check and adjust your credentials.
 
-If it is, we can try whether the integration flow is triggered as soon as a new sales order comes in. Go to SAP Integration Suite, Advanced Event Mesh and go to **Cluster Manager**.
+Once the status of your micro-integration flow is started and in green, you can click on **“Monitor Message Processing”** under **“Status Detail”**. This will take you to the message processing monitoring of this specific integration flow.
 
-![Pic 12](/./images/Screenshot%202025-05-30%20at%2011.33.26.png)
+<img width="1669" height="472" alt="image" src="https://github.com/user-attachments/assets/89f71b6f-8cc0-4fba-bc56-47883f4fae4c" />
 
-Select your **Broker Service**.
+You should see that your flow has been triggered and failed, if not try creating some sales order events in the sales order app.
 
-![Pic 13](/./images/Screenshot%202025-05-30%20at%2011.34.44.png)
+<img width="1848" height="1009" alt="image" src="https://github.com/user-attachments/assets/63d972b1-61ac-4c5f-81c0-822a6dd66723" />
 
-Then click on **“Try Me!”**, and click on **“Open Broker Manager"**.
+There should be an error related to your SFTP server, you can check that by scrolling down at the right to “Logs”, you’ll see a table with **“Runs”**, there you can click on **“Info”** and you should see that the red envelope is at the SFTP Receiver Adapter.
+<img width="1848" height="841" alt="image" src="https://github.com/user-attachments/assets/c523dd01-b518-44cb-8348-92fbef2cfdb5" />
 
-![Pic 14](/./images/Screenshot%202025-05-30%20at%2011.36.00.png)
+If you go back to the previous screen (Monitor Message Processing), and you select one of the runs, go to “Artifact Details” and click on “Navigate to Artifact Editor”.
+This will bring you back to the artifact editor, here you can start editing your flow again by clicking on the blue “Edit” button.
 
-In the Broker Manager, you enter the **Client Username** and **Client Password** which you found on the previous page and click on **“Connect”**.
+<img width="1847" height="749" alt="image" src="https://github.com/user-attachments/assets/2b032d4a-0ad7-423c-8b49-0d1544831e17" />
 
-![Pic 15](/./images/Screenshot%202025-05-30%20at%2011.37.30.png)
-
-And then you enter **sap.com/salesorder/create/V1/[FirstNameLastName]** and enter some sample sales order data in JSON in the message content and then click on **“Publish”**. Leave this page open as we’ll need it later in the exercise.
-
-![Pic 16](/./images/Screenshot%202025-05-30%20at%2011.39.16.png)
-
-If you now go back to SAP Integration Suite, choose Monitor --> Integrations and APIs --> go to “Monitor Message Processing” --> All Artifacts Past Hour Messages.
-![Pic 17](/./images/MonitorAllArtifacts.png)
-
-You should see that the flow you just created was triggered.
-
-![Pic 17](/./images/Picture2.png)
-
-There should be an error related to your SFTP server, you can check that by scrolling down at the right to “Logs”, you’ll see a table with “Runs”, there you can click on “Info” and you should see that the red envelope is at the SFTP Receiver Adapter.
-
-![Pic 18](/./images/Picture3.png)
 
 ## Exercise 7.3 Adding converters to the micro-integration flow
 
