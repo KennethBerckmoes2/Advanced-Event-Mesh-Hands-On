@@ -304,8 +304,8 @@ END IF
 
 Now that you know how to build a simple mapping expression, build the following mapping expression (functions we’re using are “constant”, “if” and “equals(string)”):
 
+<img width="1706" height="428" alt="image" src="https://github.com/user-attachments/assets/30bfed96-b47a-41de-8ecd-6c09718958c9" />
 
-![Pic 36](/./images/Picture6.png)
 
 Now, let’s test our mapping, click on the button **“Simulate”** on top and upload the file **“[orders.xml](https://github.tools.sap/I505867/SAP-IS-AEM-Hands-On/blob/main/exercises/ex7/orders.xml)”** as test input.
 
