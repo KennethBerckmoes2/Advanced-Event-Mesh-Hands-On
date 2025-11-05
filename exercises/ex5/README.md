@@ -104,7 +104,7 @@ To make this easier for you, find the topics below for copy and paste.
 
 ## Summary
 Now you've learned how to use hierarchical topics and wildcards in Advanced Event Mesh to publish and subscribe to specific or grouped events efficiently.
-Continue to - [Exercise 6 - Advanced Event Mesh as an end-to-end platform for Event-Driven Architectures](exercises/ex6/) 
+Continue to - [Exercise 6 - Advanced Event Mesh as an end-to-end platform for Event-Driven Architectures](../ex6/README.md) 
 
 
 
