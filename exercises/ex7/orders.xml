@@ -1,59 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<orderHeader xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <order>
-    <salesOrderNumber>SO456789</salesOrderNumber>
-    <creator>Jane Smith</creator>
-    <date>2025-05-28</date>
-    <salesType>Retail</salesType>
-    <ordertype>Rush</ordertype>
-    <salesOrg>EMEA</salesOrg>
-    <distributionChannel>Mobile</distributionChannel>
-    <division>01</division>
-    
+<?xml version='1.0' encoding='UTF-8'?>
+<orderHeader>
+    <salesOrderNumber>SO1007</salesOrderNumber>
+    <creator>Alice Brown</creator>
+    <date>2023-08-10</date>
+    <salesType>In-store</salesType>
+    <ordertype>Standard</ordertype>
+    <salesOrg>SA01</salesOrg>
+    <distributionChannel>DC02</distributionChannel>
+    <division>DV01</division>
+    <netvalue>399.00</netvalue>
+    <currency>USD</currency>
     <customer>
-      <customerId>CUST1001</customerId>
-      <customerName>Tech Solutions Ltd.</customerName>
-      <zipCode>10115</zipCode>
-      <street>Innovationsstraße 12</street>
-      <phone>+49-30-1234567</phone>
+        <customerId>CUST007</customerId>
+        <customerName>101 Corp</customerName>
+        <zipCode>24680</zipCode>
+        <street>Sixth Street</street>
+        <phone>555-222-3333</phone>
+        <country>USA</country>
+        <city>Atlanta</city>
+        <emailAddress>
+            <email>Alice.Brown@101corp.com</email>
+        </emailAddress>
     </customer>
-    
-    <customer>
-      <customerId>CUST1002</customerId>
-      <customerName>DataCorp</customerName>
-      <zipCode>75008</zipCode>
-      <street>88 Avenue des Champs-Élysées</street>
-      <phone>+33-1-9876543</phone>
-    </customer>
-
     <orderItem>
-      <item>0010</item>
-      <material>PRD-A123</material>
-      <materialType>Hardware</materialType>
-      <itemType>Standard</itemType>
-      <orderSchedule>
-        <scheduleNumber>SN001</scheduleNumber>
-        <quantity>20.00</quantity>
-        <uom>EA</uom>
-      </orderSchedule>
-      <orderSchedule>
-        <scheduleNumber>SN002</scheduleNumber>
-        <quantity>15.00</quantity>
-        <uom>EA</uom>
-      </orderSchedule>
+        <item>ITEM011</item>
+        <material>MAT011</material>
+        <materialType>Product</materialType>
+        <itemType>Standard</itemType>
+        <itemDescription>EcoRide Electric bike</itemDescription>
+        <orderSchedule>
+            <scheduleNumber>SCH011</scheduleNumber>
+            <quantity>100.0</quantity>
+            <uom>EA</uom>
+        </orderSchedule>
+        <orderSchedule>
+            <scheduleNumber>SCH012</scheduleNumber>
+            <quantity>30.0</quantity>
+            <uom>EA</uom>
+        </orderSchedule>
     </orderItem>
-
-    <orderItem>
-      <item>0020</item>
-      <material>PRD-B456</material>
-      <materialType>Software</materialType>
-      <itemType>License</itemType>
-      <orderSchedule>
-        <scheduleNumber>SN003</scheduleNumber>
-        <quantity>100.00</quantity>
-        <uom>Users</uom>
-      </orderSchedule>
-    </orderItem>
-    
-  </order>
 </orderHeader>
